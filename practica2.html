@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <title>practica con google maps </title>
+    <meta charset="uft-8">
+
+    <script type="text/javascript">
+
+        window.addEventListener('load', inicio, false);
+    
+        function inicio() {
+            document.getElementById('obtener').addEventListener('click', recuperarLocalizacion, false);
+        }
+    
+    
+        function inicio2() {
+        if (navigator.geolocation) {
+            navigator.geolocation.watchPosition(CoordenadaActual);
+        } else {
+          alert('no sirve');
+        }
+    }
+    function CoordenadaActual(posicion) {
+        document.getElementById('dato').innerHTML='Latitud:'+
+           posicion.coords.latitude+
+           '<br> Longitud:'+posicion.coords.longitude+
+           '<br>Exactitud:'+posicion.coords.accuracy;
+    }
+
+        function recuperarLocalizacion() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(mostrarCoordenada);
+            } else {
+                alert('no sirve');
+            }
+        }
+        
+        function mostrarCoordenada(posicion) {
+            document.getElementById('dato').innerHTML='Latitud:'+
+           posicion.coords.latitude+
+           '<br> Longitud:'+posicion.coords.longitude+
+           '<br>Exactitud:'+posicion.coords.accuracy;
+        }
+           
+    </script>  
+
+</head>
+<body>
+    <input type="button" id="obtener" value="obtener tu localizcion">
+    <br>
+    <div id="dato"></div>
+</body>
+
+</html>
