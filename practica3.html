@@ -1,16 +1,16 @@
-10.39158299 ,-84.4382721<!DOCTYPE HTML>
+<!DOCTYPE HTML>
 <html>
 <head>
-  <title>dragstart, dragover, drop practica</title>  
+  <title>Título de la página</title>  
   <meta charset="UTF-8">
 
 <style>
   #recuadro {
-    width:300px;
+    width:500px;
     height:50px;
-    background-color:yellow;
+    background-color:rgb(105, 13, 93);
     border-style:solid;
-    border-color:red;
+    border-color:rgb(0, 0, 0);
     font-size:1.5em;
   }
   #palabras span {
@@ -22,16 +22,17 @@
     window.addEventListener('load', inicio, false);
 
     function inicio() {
-        document.getElementById('palabra1').addEventListener('dragstart', drag, false);
-        document.getElementById('palabra2').addEventListener('dragstart', drag, false);
-        document.getElementById('palabra3').addEventListener('dragstart', drag, false);
-        document.getElementById('palabra4').addEventListener('dragstart', drag, false);                
+        document.getElementById('palabra1').addEventListener('dragstart', dragInicio, false);
+        document.getElementById('palabra2').addEventListener('dragstart', dragInicio, false);
+        document.getElementById('palabra3').addEventListener('dragstart', dragInicio, false);
+        document.getElementById('palabra4').addEventListener('dragstart', dragInicio, false);                
         document.getElementById('recuadro').addEventListener('dragover', permitirDrop, false);        
-        document.getElementById('recuadro').addEventListener('drop', drop, false
-        );                
+        document.getElementById('recuadro').addEventListener('drop', drop, false);
+        document.getElementById('recuadro').addEventListener('dragenter', entra, false);
+         
     }
     
-    function drag(ev)
+    function dragInicio(ev)
     {
         ev.dataTransfer.setData("Text",ev.target.id);
     }    
@@ -41,23 +42,32 @@
         ev.preventDefault();
         var dato=ev.dataTransfer.getData("Text");
         ev.target.appendChild(document.getElementById(dato));
+        document.getElementById(dato).removeEventListener('dragstart', dragInicio, false);        
+        document.getElementById('recuadro').style.background = "rgba(16, 194, 185, 0.397);";            
     }  
 
     function permitirDrop(ev)
     {
         ev.preventDefault();
     }
+    
+    function entra(ev)
+    {
+        document.getElementById('recuadro').style.background = "rgba(16, 194, 185, 0.397)";
+    }
+    
+  
 </script>
 
 </head>
 <body>
-  <p>Arrastre en orden las palabras para formar la oración correcta.</p>
+  <p>acomode el nombre correctamente .</p>
   <div id="recuadro"></div>
   <div id="palabras">
-    <span id="palabra1" draggable="true">the </span>
-    <span id="palabra2" draggable="true">is </span>
-    <span id="palabra3" draggable="true">What </span>
-    <span id="palabra4" draggable="true">time </span>    
+    <span id="palabra1" draggable="true">Rojas </span>
+    <span id="palabra2" draggable="true">Bryan </span>
+    <span id="palabra3" draggable="true">Brenes </span>
+    <span id="palabra4" draggable="true">Thomas </span>    
   </div>
 </body>
 </html>
