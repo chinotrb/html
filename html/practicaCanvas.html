@@ -1,0 +1,424 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Título de la página</title>  
+  <meta charset="UTF-8">
+
+<script  type="text/javascript">
+
+//
+function retornarimgSecuencial(x) {
+  var canvas = document.getElementById(x);
+  if (canvas.getContext) {
+    var imgSecuencial = canvas.getContext("2d");   
+    return imgSecuencial;
+  } else
+    return false;
+}
+
+function dibujarIMG() {
+  var imgSecuencial=retornarimgSecuencial("imgSecuencial1");
+  if (imgSecuencial) {
+    img1 = new Image(); 
+    img1.src = 'html5.png';
+    img1.onload = function(){ 
+      var patron = imgSecuencial.createPattern(img1,'repeat');
+      imgSecuencial.fillStyle = patron;
+      imgSecuencial.fillRect(0,0,600,600);
+    }      
+  }
+}
+//
+
+//crea un tablero 
+function retornarCuadradosM(d) {
+  var canvas = document.getElementById(d);
+  if (canvas.getContext) {
+    var cuadradosM = canvas.getContext("2d");   
+    return cuadradosM;
+  } else
+    return false;
+}
+
+function dibujarMiniCuadrado() {
+  var cuadradosM1=retornarCuadradosM("cuadradosM1");
+  if (cuadradosM1) {
+    cuadradosM1.strokeStyle="rgb(0,0,255)";
+    cuadradosM1.beginPath();
+    cuadradosM1.moveTo(25,0);
+    cuadradosM1.lineTo(25,50);
+    cuadradosM1.stroke();
+    cuadradosM1.beginPath();
+    cuadradosM1.moveTo(0,25);
+    cuadradosM1.lineTo(50,25);
+    cuadradosM1.stroke();
+    var cuadradosM2=retornarCuadradosM("cuadradosM2");
+    if (cuadradosM2) {
+      var patron = cuadradosM2.createPattern(cuadradosM1.canvas,'repeat');
+      cuadradosM2.fillStyle = patron;
+      cuadradosM2.fillRect(0,0,300,300);            
+    }  
+  }  
+}
+//crear un tablero 
+
+//CANVAS (transparencias)
+function retornarTranparinecia(m) {
+  var canvas = document.getElementById(m);
+  if (canvas.getContext) {
+    var cuandroT = canvas.getContext("2d");   
+    return cuandroT;
+  } else
+    return false;
+}
+
+function dibujarCuadroT() {
+  var cuandroT=retornarTranparinecia("cuandroT1");
+  if (cuandroT) {
+    cuandroT.fillStyle="#ff0000";
+    cuandroT.fillRect(0,0,200,200);
+    
+    cuandroT.fillStyle="rgba(0,255,0,0.3)";
+    cuandroT.fillRect(100,0,200,200);
+
+    cuandroT.fillStyle="rgba(0,0,255,0.2) ";
+    cuandroT.fillRect(50,50,200,200);
+
+  }
+}
+//CANVAS (transparencias)
+
+
+//canvasimg 
+function retornarimgen(i) {
+  var canvas = document.getElementById(i);
+  if (canvas.getContext) {
+    var imgen = canvas.getContext("2d");   
+    return imgen;
+  } else
+    return false;
+}
+
+function dibujarImgen() {
+  var imgen=retornarimgen("imgen1");
+  if (imgen) {
+    imgen.fillStyle="#000000";
+    imgen.fillRect(0,0,600,600);
+    img1 = new Image(); 
+    img1.src = 'html5.png';
+    img1.onload = function(){ 
+      imgen.drawImage(img1,0,0);
+      imgen.drawImage(img1,300,0,50,50);
+      imgen.drawImage(img1,0,0,125,125,0,300,72,72);
+    }  
+  }
+}
+//canvasimg
+
+
+//text canvas 
+function retornarText(t){
+  var canvas = document.getElementById(t);
+  if (canvas.getContext) {
+    var text = canvas.getContext("2d");   
+    return text;
+  } else
+    return false;
+
+}
+
+function canvasText(){
+  var text=retornarText("text1");
+  if (text1) {
+    text.fillStyle="#3E0064 ";
+    text.font="bold 25px Arial";
+    text.textAlign="center"
+    text.fillText("vamos a Fortuna",150,50);
+
+    text.textAlign="center";
+    text.fillText("a unas cavinas",150,100);
+
+    text.textAlign="center";
+    text.fillText("por 4 dias",150,150);
+    
+    var anchopx=text.measureText("Hola Mundo");
+
+    text.textAlign="center"
+    text.strokeStyle="rgb(0,0,255)";
+    text.strokeText("by  chino",150,250);
+  }
+
+}
+//text canvas
+
+
+// linea no recta 
+function retornarLineaNoR(r){
+  var canvas = document.getElementById(r);
+  if (canvas.getContext) {
+    var lineaNoR = canvas.getContext("2d");   
+    return lineaNoR;
+  } else
+    return false;
+}
+
+function dibujarLineaNoR() {
+  var lineaNoR=retornarLineaNoR("lineaNoR1");
+  if (lineaNoR) {
+    lineaNoR.strokeStyle="#640011 ";
+    lineaNoR.beginPath();
+    lineaNoR.moveTo(0,300);
+    lineaNoR.bezierCurveTo(200,5,220,300,300,1);
+    lineaNoR.stroke();
+    
+
+    lineaNoR.strokeStyle="#640011 ";
+    lineaNoR.beginPath();
+    lineaNoR.moveTo(300,300);
+    lineaNoR.bezierCurveTo(20,200,220,230,-300,-300);
+    lineaNoR.stroke();
+  }
+}
+// linea no recta 
+
+
+//arcos rellenos y lineal
+function retornarArco(n) {
+  var canvas = document.getElementById(n);
+  if (canvas.getContext) {
+    var arco = canvas.getContext("2d");   
+    return arco;
+  } else
+    return false;
+}
+
+function dibujarArco() {
+  var arco=retornarArco("arco1");
+  if (arco) {
+    arco.strokeStyle="#440064";
+    arco.beginPath();
+    arco.arc(100,100,50,0,Math.PI,true);
+    arco.stroke();
+    
+    arco.strokeStyle="#00644A";
+    arco.beginPath();
+    arco.arc(100,200,50,0,Math.PI,false);
+    arco.stroke();
+    
+    arco.fillStyle="#440064";
+    arco.beginPath();    
+    arco.arc(200,100,50,0,Math.PI,true);
+    arco.fill();
+    
+    arco.fillStyle="#00644A";
+    arco.beginPath();
+    arco.arc(200,200,50,0,Math.PI*2,true);
+    arco.fill();
+    
+  }
+}
+//arcos rellenos y lineal
+
+
+//dibujar figura
+function devolverFigura(q){
+    var canvas = document.getElementById(q);
+  if (canvas.getContext) {
+    var figura = canvas.getContext("2d");   
+    return figura;
+  } else
+    return false;
+}
+
+function dibujarFigura() {
+  var figura=devolverFigura("figura1");
+  if (figura) {
+    figura.fillStyle="#000000 ";
+    figura.strokeStyle="#440064";
+    figura.lineWidth=5;
+    figura.beginPath();
+    figura.moveTo(150,10);
+    figura.lineTo(11,200);
+    figura.lineTo(290,290);
+    figura.lineTo(150,5);
+    figura.fill();
+    figura.stroke();    
+  }
+}
+//dibujar figura
+
+
+//dibujar y borrar
+function borrarPuntos(a){
+    var canvas =  document.getElementById(a)
+
+    if(canvas.getContext){
+        var Borrar= canvas.getContext("2d")
+        return Borrar ;
+     }else
+     return false;
+
+}
+
+function dibujarBorrar(){
+    var Borrar=borrarPuntos("Borrar1")
+    if(Borrar){
+        Borrar.fillStyle="#000000";
+        Borrar.fillRect(0,0,300,300);
+        Borrar.clearRect(10,10,150,20);
+        Borrar.clearRect(10,130,150,20);
+        Borrar.clearRect(160,30,20,100);
+        Borrar.clearRect(10,250,150,20);
+        Borrar.clearRect(160,150,20,100);
+        Borrar.clearRect(5,10,20,260);
+        
+      
+        
+    }
+}
+//dibujar y borrar
+
+
+//rellenar figura 
+function rectanguloLleno(e) {
+  var canvas = document.getElementById(e);
+  if (canvas.getContext) {
+    var cubo = canvas.getContext("2d");   
+    return cubo;
+  } else
+    return false;
+}
+
+function dibujarRectangulo() {
+  var cubo=rectanguloLleno("cubo1");
+  if (cubo) { 
+    cubo.shadowOffsetX=-10;
+    cubo.shadowOffsetY=5;
+    cubo.shadowBlur=10;
+    cubo.shadowColor="rgba(0, 0, 255, 0.5)";
+    cubo.fillStyle="#000000";
+    cubo.fillRect(20,20,150,100);
+    cubo.shadowOffsetX=5;
+    cubo.fillRect(250,20,100,100);
+  }
+}
+//rellenar figura
+
+
+//tipos de lineas
+function tipoDeLineas(x) {
+  var canvas = document.getElementById(x);
+  if (canvas.getContext) {
+    var linea = canvas.getContext("2d");   
+    return linea;
+  } else
+    return false;
+}
+
+function dibujarLineas() {
+  var linea=tipoDeLineas("linea1");
+  if (linea) { 
+    linea.beginPath();
+    linea.strokeStyle="#641497";
+    linea.lineWidth=7;
+    linea.moveTo(10,5);
+    linea.lineTo(10,295);
+    linea.stroke();
+
+    linea.beginPath();
+    linea.strokeStyle="#149768";
+    linea.lineCap="butt";
+    linea.moveTo(30,5);
+    linea.lineTo(30,295);
+    linea.stroke();
+    linea.lineCap="round";
+    linea.beginPath();
+    linea.moveTo(50,5);
+    linea.lineTo(50,295);
+    linea.stroke();
+    linea.lineCap="square";
+    linea.beginPath();
+    linea.moveTo(70,5);
+    linea.lineTo(70,295);
+    linea.stroke();
+
+    linea.beginPath();
+    linea.strokeStyle="#FFD8D8 ";
+    linea.lineJoin="bevel";
+    linea.moveTo(100,90);
+    linea.lineTo(130,10);
+    linea.lineTo(160,90);
+    linea.stroke();
+    
+    linea.beginPath();
+    linea.lineJoin="round";
+    linea.moveTo(100,180);
+    linea.lineTo(130,100);
+    linea.lineTo(160,180);
+    linea.stroke();
+    
+    linea.beginPath();
+    linea.lineJoin="miter";
+    linea.moveTo(100,270);
+    linea.lineTo(130,190);
+    linea.lineTo(160,270);
+    linea.stroke();
+    
+  }
+}
+// tipo de lineas
+
+
+
+</script>
+
+</head>
+<body onLoad="dibujarLineas(),dibujarRectangulo(),dibujarBorrar(),dibujarFigura(),dibujarArco(),dibujarLineaNoR(),canvasText(),dibujarImgen(),dibujarCuadroT(),dibujarMiniCuadrado(),dibujarIMG() "> 
+  <h1>canvas</h1>
+<h3>lineas</h3>
+<br>
+<canvas id="linea1" width="300" height="300"></canvas>
+<br>
+<h3>dibujar y borrar</h3>
+<br>
+<canvas id="Borrar1" width="300" height="300"></canvas>
+<br>
+<h3>dibujar linea y rellenar </h3>
+<br>
+<canvas id="figura1" width="300" height="300"></canvas>
+<br>
+<h3>dibujar relleno con sombras </h3>
+<br>
+<canvas id="cubo1" width="250" height="200"></canvas>
+<br>
+<h3>dibujar circulos y linea de </h3>
+<br>
+<canvas id="arco1" width="300" height="300"></canvas>
+<br>
+<h3>dibujar linea curba </h3>
+<br>
+<canvas id="lineaNoR1" width="300" height="300"></canvas>
+<br>
+<h3>definicion de textos</h3>
+<br>
+<canvas id="text1" width="300" height="300"></canvas>
+<br>
+<h3>imagenes</h3>
+<br>
+<canvas id="imgen1" width="600" height="600"></canvas>
+<br>
+<h3>color sombras</h3> 
+<br>
+<canvas id="cuandroT1" width="300" height="300"></canvas>
+<br>
+<h3>tablero</h3>
+<br>
+<canvas id="cuadradosM1" width="50" height="50"></canvas>
+<br>
+<canvas id="cuadradosM2" width="300" height="300"></canvas>
+<br>
+<h3>imagenes lineal</h3>
+<br>
+<canvas id="imgSecuencial1" width="600" height="600"></canvas>
+</body>
+</html>
