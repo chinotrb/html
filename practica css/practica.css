@@ -1,137 +1,382 @@
-
 h1 {
-    font-family: times new roman;
-    font-size: 40px;
-    font-style: italic;
+    text-align: center;
+    font-size: 25px;
+    font-style: normal;
     font-weight: bold;
-    color: #c4c713;
-    background-color: #000000;
-    text-align: left;
-    text-decoration:overline;
+    color: #ffffff;
+    background-color: rgb(45, 133, 133);
+}
+
+.posicion {
+    position: relative;
+    text-align: center;
+    top: -160px;
+    color: rgb(0, 104, 99);
+    font-size: 50px;
+}
+
+.m {
+    font-family: times new roman;
+    font-size: 50px;
+    font-style: Arial;
+    font-weight: bold;
+    color: #cccf1e;
+    text-align: center;
+    text-decoration: overline;
 }
 
 h2 {
     font-family: times new roman;
     font-size: 35px;
-    font-style: italic;
+    font-style: Arial;
     font-weight: bold;
-    color: #c4c713;
-    background-color: #000000;
+    color: #fcfcfc;
     text-align: center;
-    text-decoration:overline;
+    text-decoration: overline;
 }
 
-h3 {
+h4 {
     font-family: times new roman;
     font-size: 25px;
-    font-style: italic;
+    font-style: Arial;
     font-weight: bold;
     color: #c4c713;
-    background-color: #000000;
-    text-align: right;
-    text-decoration: overline;
-}
-
-h4{
-font-family: times new roman;
-    font-size: 25px;
-    font-style: italic;
-    font-weight: bold;
-    color: #c4c713;
-    background-color: #000000;
-    text-align: center;
+    text-align: left;
     text-decoration: overline;
     word-spacing: 30px;
-} 
-
-em{
-   color: brown;
-   background-color: #000000;
-   text-align: center;
-   font-size: 20px;
 }
+
+#menu {
+    font-family: Arial;
+}
+
+#menu p {
+    margin: 0px;
+    padding: 20px;
+}
+
+#menu a {
+    display: grid;
+    padding: 3px;
+    width: 160px;
+    border-bottom: 2px solid #ecbb3465;
+    text-align: center;
+}
+
+#menu a:link, #menu a:visited {
+    color: #cfcc0f;
+    text-decoration: overline;
+}
+
+#menu a:hover {
+    background-color: #336699;
+    color: #ffffff;
+}
+
+#menuhorizontal {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+#menuhorizontal a {
+    width: 100px;
+    text-decoration: none;
+    text-align: center;
+    color: #f0e006;
+    background-color: #000000;
+    padding: 3px 5px;
+    border-right: 1px solid gold;
+    display: block;
+}
+
+#menuhorizontal li {
+    float: left;
+}
+
+#menuhorizontal a:hover {
+    background-color: #336699;
+}
+
 #cabecera {
-    font-family:Times New Roman;
-    font-size:30px;
-    text-align:center;
+    font-family: Times New Roman;
+    font-size: 30px;
     text-align: center;
-    color:#91840e;
-    background-color:#bbbbbb;
-  }
-  
-  .borde {
-    background-color:#c4c713;
-    border-width:2px;
-    border-style:solid;
+    text-align: center;
+    color: #91840e;
+    background-color: #bbbbbb;
+}
+
+.borde {
+    background-color: #c4c713;
+    border-width: 2px;
+    border-style: solid;
     border-color: #000000;
-
     font-family: times new roman;
     font-size: 25px;
-    font-style: italic;
+    font-style: Arial;
     font-weight: bold;
     text-align: center;
     word-spacing: 30px;
-  }
-  .otroBorde {
-    background-color:#c4c713;
-    border-width:5px;
-    border-style:double;
-    border-color:#000000;
+}
 
+.otroBorde {
+    background-color: #c4c713;
+    border-width: 5px;
+    border-style: double;
+    border-color: #000000;
     font-family: times new roman;
     font-size: 25px;
-    font-style: italic;
+    font-style: Arial;
     font-weight: bold;
     text-align: center;
     word-spacing: 30px;
-  }
+}
 
-  .titulopagina {
-    background-color:#330606;
-    text-align:center;
-    font-family:verdana;
-    font-size:40px;
-
-    border-left-width:5px;
-    border-right-width:5px;
-
-    border-top-width:3px;
-    border-bottom-width:3px;
-    
-    border-right-style:double;
-    border-left-style:double;
-    
-    border-bottom-style:solid;
-    border-top-style:solid;
-
-    border-bottom-color:#000000;
-    border-top-color:#000000;
-    
-    border-left-color:#4b0000;
-    border-right-color:#4b0000;
-  }
-
-
-  .codigofuente {
-    font-size:12px;
-    background-color:#ffffcc;
-    border-width:1px;
-    border-style:dotted;
-    border-color:#ffaa00;
-  
-    padding:20px;
-  }
-
-  .parrafo {
-    background-color:#550b51;
-    margin:0px;
-    border-width:1px;
-    border-style:solid;
-    border-color:#0f0f0f;
+.titulopagina {
+    color: rgb(255, 204, 0);
+    background-color: #000000;
     text-align: center;
-  }
-  .box{
-    background-image: url(../starWars.jpg);
-    padding:100px;
+    font-family: verdana;
+    font-size: 40px;
+    border-left: 0px;
+    border-left-width: 10px;
+    border-right-width: 10px;
+    border-top-width: 3px;
+    border-bottom-width: 3px;
+    border-right-style: double;
+    border-left-style: double;
+    border-bottom-style: solid;
+    border-top-style: solid;
+    border-bottom-color: #aa9728;
+    border-top-color: #aa9728;
+    border-left-color: #cfb108;
+    border-right-color: #cfb108;
+    padding: 80px;
+    margin: 80px;
+}
+
+.codigofuente {
+    background-color: #26888b;
+    padding: 5px 30px;
+    font-size: 12px;
+    border-width: 1px;
+    border-style: dotted;
+    border-color: #14887e;
+    padding: 20px;
+}
+
+#barraIzquierda {
+    left: 110px;
+    top: 50px;
+    width: 600px;
+    height: 100%;
+}
+
+img {
+    float: right;
+}
+
+p.tituloM {
+    font-family: times new roman;
+    font-size: 35px;
+    font-style: Arial;
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: overline;
+    position: absolute;
+    top: 1150px;
+    left: 415px;
+    width: 600px;
+    margin-top: 10px;
+}
+
+p.tituloJ {
+    font-family: times new roman;
+    font-size: 35px;
+    font-style: Arial;
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: overline;
+    position: absolute;
+    top: 1150px;
+    left: 1120px;
+    width: 600px;
+    margin-top: 10px;
+}
+
+#bryan {
+    text-align: center;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: bold;
+    color: #ffffff;
+    position: absolute;
+    top: 950px;
+    left: 350px;
+    width: 1300px;
+    margin-top: 10px;
+    background-color: rgb(45, 133, 133);
+}
+
+#mattew {
+    text-align: center;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: bold;
+    color: #ffffff;
+    position: absolute;
+    top: 1200px;
+    left: 350px;
+    width: 600px;
+    margin-top: 10px;
+    background-color: rgb(45, 133, 133);
+}
+
+#jhojann {
+    text-align: center;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: bold;
+    color: #ffffff;
+    position: absolute;
+    top: 1200px;
+    left: 1050px;
+    width: 600px;
+    margin-top: 10px;
+    background-color: rgb(45, 133, 133);
+}
+
+.box {
+    background-image: url(../imagen/fondoDeColor3.jpg);
+    padding: 230px;
     margin: 100px;
-  }
+    position: relative;
+    text-align: center;
+    top: 0px;
+}
+
+.letra {
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-style: italic;
+}
+
+.color {
+    background-color: darkcyan;
+}
+
+body {
+    background: #ffffee url(../imagen/d-5.png);
+}
+
+a:link {
+    text-align: center;
+    color: #ebe706;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-style: unset;
+}
+
+a:visited {
+    text-align: center;
+    color: #ebe706;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-style: unset;
+}
+
+a:active {
+    text-align: center;
+    color: #ebe706;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-style: unset;
+}
+
+caption {
+    font-family: times new roman;
+    font-size: 40px;
+    font-style: Arial;
+    font-weight: bold;
+    color: #c4c713;
+    position: absolute;
+    left: 700px;
+    text-decoration: overline;
+}
+
+table {
+    font-size: 30;
+    border-collapse: collapse;
+}
+
+th {
+    font-size: 20;
+    border-right: 2px solid rgb(0, 0, 0);
+    border-bottom: 1px solid rgb(0, 0, 0);
+    padding: 2em;
+    background-color: #00a085;
+    position: relative;
+    left: 1000px;
+}
+
+thead th {
+    font-size: 20px;
+    background-color: #00a085;
+    color: rgb(0, 0, 0);
+}
+
+tbody th {
+    font-family: arial;
+    background-color: #00a085;
+    color: rgb(0, 0, 0);
+}
+
+td {
+    border: 1px solid #000;
+    padding: .5em;
+    background-color: #d87e54;
+    width: 100px;
+    text-align: center;
+    position: relative;
+    left: 1000px;
+}
+
+.epic {
+    align-content: center;
+    padding: 400px;
+    margin: 300px;
+}
+
+p.mini {
+    font-family: times new roman;
+    font-size: 15px;
+    font-style: Arial;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: right;
+}
+
+p.normal {
+    font-family: times new roman;
+    font-size: 20px;
+    font-style: Arial;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: left;
+}
+
+p.info {
+    font-family: times new roman;
+    font-size: 35px;
+    font-style: Arial;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: overline;
+}
+
+.fondoT {
+    background-color: rgba(16, 100, 92, 0.404);
+}
