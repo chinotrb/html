@@ -25,14 +25,29 @@ h1 {
     text-decoration: overline;
 }
 
-h2 {
+h2.bry {
+    position: absolute;
+    top: 760px;
+    left: 800px;
     font-family: times new roman;
     font-size: 35px;
     font-style: Arial;
     font-weight: bold;
-    color: #fcfcfc;
-    text-align: center;
+    color: #ffffff;
     text-decoration: overline;
+    
+}
+h2.hered{
+    position: absolute;
+    top:2600px;
+    left: 450px;
+    font-family: times new roman;
+    font-size: 30px;
+    font-style: Arial;
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: overline;
+    
 }
 
 h4 {
@@ -212,11 +227,11 @@ p.tituloJ {
     font-weight: bold;
     color: #ffffff;
     position: absolute;
-    top: 950px;
+    top: 800px;
     left: 350px;
     width: 1300px;
     margin-top: 10px;
-    background-color: rgb(45, 133, 133);
+    background-color: rgba(3, 85, 85, 0.308);
 }
 
 #mattew {
@@ -230,7 +245,7 @@ p.tituloJ {
     left: 350px;
     width: 600px;
     margin-top: 10px;
-    background-color: rgb(45, 133, 133);
+    background-color: rgba(3, 85, 85, 0.308);
 }
 
 #jhojann {
@@ -244,7 +259,7 @@ p.tituloJ {
     left: 1050px;
     width: 600px;
     margin-top: 10px;
-    background-color: rgb(45, 133, 133);
+    background-color: rgba(3, 85, 85, 0.308);
 }
 
 .box {
@@ -318,7 +333,7 @@ th {
     padding: 2em;
     background-color: #00a085;
     position: relative;
-    left: 1000px;
+    left: 985px;
 }
 
 thead th {
@@ -340,7 +355,7 @@ td {
     width: 100px;
     text-align: center;
     position: relative;
-    left: 1000px;
+    left: 985px;
 }
 
 .epic {
@@ -379,4 +394,12 @@ p.info {
 
 .fondoT {
     background-color: rgba(16, 100, 92, 0.404);
+}
+.jumbotron{
+   background-color: rgba(220, 20, 60, 0.281);
+}
+p.info2{
+    color: rgb(0, 0, 0);
+    font-size: 25px;
+ 
 }

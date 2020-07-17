@@ -1,0 +1,23 @@
+.jumbotron{
+background-color: rgba(38, 80, 82, 0.342);
+color: black;
+
+}
+body{
+    background-image: url(../imagen/cool.png);
+    text-decoration-color:white ;
+    color: whitesmoke;
+}
+hr{
+    color: blanchedalmond;
+    background-color: cornsilk;
+}
+tbody{
+    background-color: rgb(0, 0, 0);
+}
+td.one{
+    color: rgb(255, 255, 255);
+}
+td.two{
+    color: black;
+}
