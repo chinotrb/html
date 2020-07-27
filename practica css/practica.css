@@ -403,3 +403,27 @@ p.info2{
     font-size: 25px;
  
 }
+a.miniImag{
+   background-color: maroon;
+}
+button.bryanx{
+    color: midnightblue;
+    background-image: url(../imagen/estrellado.jpg);
+    position: absolute;
+    top: 760px;
+    left: 730px;
+}
+button.mattewx{
+    color: midnightblue;
+    background-image: url(../imagen/estrellado.jpg);
+    position: absolute;
+    top: 760px;
+    left: 730px;
+}
+button.johannx{
+    color: midnightblue;
+    background-image: url(../imagen/estrellado.jpg);
+    position: absolute;
+    top: 1000px;
+    left: 730px;
+}

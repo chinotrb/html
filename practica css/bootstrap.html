@@ -14,6 +14,19 @@
 
 <body>
 
+<div class="container">
+      <a data-toggle="mensaje" title="YouTube" href="https://www.youtube.com" class="btn btn-success">YouTube</a>
+      <a data-toggle="mensaje" title="Git Hub" href="https://github.com" class="btn btn-success ml-2">git hub</a>
+      <a data-toggle="mensaje" title="Pagina de chino" href="file:///C:/Users/chino/Documents/programacion/html.practica/practica%20css/practicaCss.html" class="btn btn-success ml-2">chinox</a>
+    </div>  
+  
+    
+
+  <script>
+      $(document).ready(function(){
+          $('[data-toggle="mensaje"]').tooltip(); 
+      });
+      </script>
 
   <div class="container">
 
@@ -26,6 +39,10 @@
 
     <hr>
 
+
+    
+
+    
     <div class="jumbotron">
       <div class="col-md">
         <div class="card">  
@@ -40,6 +57,29 @@
     </div>
 
     
+    <div class="progress mb-3">
+      <div class="progress-bar bg-success" style="width:70%">
+        70%
+      </div>
+    </div><br>
+
+    <div class="progress mb-3">
+      <div class="progress-bar bg-info" style="width:80%">
+        80%
+      </div>
+    </div><br>
+
+    <div class="progress mb-3">
+      <div class="progress-bar bg-warning" style="width:90%">
+        90%
+      </div>
+    </div>
+
+    <div class="progress mb-3">
+      <div class="progress-bar bg-danger" style="width:95%">
+        95%
+      </div>
+    </div>
 
     <ol class="breadcrumb">
       <li class="breadcrumb-item"><a
@@ -230,6 +270,16 @@
       </div>
       <button type="submit" class="btn btn-default">Enviar</button>
 
+      <ul class="pagination">
+        <li class="page-item"><a class="page-link" href="#">0</a></li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item"><a class="page-link" href="#">4</a></li>
+        <li class="page-item"><a class="page-link" href="#">5</a></li>
+        <li class="page-item"><a class="page-link" href="#">6</a></li>
+        <li class="page-item"><a class="page-link" href="#">></a></li>
+      </ul>
 
 
       <div class="form-group">
@@ -366,7 +416,6 @@
   <div class="col-lg-4" style="background-color:#aaa">
     <h1>Columna 3</h1>
     <p>Esto es una prueba de bootstrap 4.</p>
-  </div>
   <div class="col-lg-4" style="background-color:#bbb">
     <h1>Columna 4</h1>
     <p>Esto es una prueba de bootstrap 4.</p>
