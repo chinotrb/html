@@ -2,15 +2,18 @@ let x = $(document);
 x.ready(inicializarEventos);
 
 function inicializarEventos() {
-  let x = $("a");
-  x.mouseover(entraMouse);
-  x.mouseout(saleMouse);
+  let x = $("#boton1");
+  x.click(ocultarRecuadro);
+  x = $("#boton2");
+  x.click(mostrarRecuadro);
 }
 
-function entraMouse() {
-  $(this).css("background-color", "#ff0");
+function ocultarRecuadro() {
+  let x = $("#descripcion");
+  x.fadeOut("slow");
 }
 
-function saleMouse() {
-  $(this).css("background-color", "#fff");
+function mostrarRecuadro() {
+  let x = $("#descripcion");
+  x.fadeIn("slow");
 }
